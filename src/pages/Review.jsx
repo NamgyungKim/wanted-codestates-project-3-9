@@ -47,14 +47,6 @@ const Review = () => {
     let clickStates = data.clicked.filter(isSelected => isSelected).length;
     const newData = { ...data };
     delete newData.clicked;
-    // 데이터상태를 맞추기위해 기존의 `clicked` key값을 제거한 상태
-
-    console.log({
-      ...newData,
-      ...{ createDt: new Date().valueOf() },
-      ...{ reviewRate: clickStates },
-      ...{ id: Math.ceil(Math.random() * 10000000).toString() },
-    });
 
     const isValid = newData => {
       return newData.productNm && newData.review && newData.productImg;

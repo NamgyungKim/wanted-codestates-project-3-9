@@ -82,7 +82,6 @@ export const dataReducer = (state = initialState, action) => {
         }
         return item;
       });
-      console.log(comment);
       return {
         ...state,
         data: comment,

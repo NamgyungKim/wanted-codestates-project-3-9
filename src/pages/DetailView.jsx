@@ -31,10 +31,6 @@ const DetailView = () => {
   const { id, productNm, productImg, reviewRate, likeCnt, review, isClicked } =
     data.find(item => item.id === pageId);
 
-  useEffect(() => {
-    console.log('데이터 변화감지');
-  }, [data]);
-
   return (
     <Wrapper>
       <Header />
